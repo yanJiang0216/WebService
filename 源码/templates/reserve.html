@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>预订车票</title>
+<style>
+        .title{
+            width: 90%;
+            margin: auto;
+            font-family: 'Times';
+            font-size: 60px;
+            font-weight: 900;
+            text-align: center;
+            background-color: rgb(207, 213, 238);
+        }
+        .div{
+             margin:auto;
+             width:80%;
+             font-size:20px;
+             text-align: center;
+             background-color: rgb(209, 211, 219);
+        }
+</style>
+</head>
+<body>
+      <h1 class='title'>预订车票</h1>
+      <form class="div" method="POST" target="_blank">
+            始发站：<input type="text" name="startstation"  size="20" maxlength="5"/><br/><br>
+            终点站：<input type="text" name="endstation"  size="20" maxlength="5"/><br/><br/>
+            <input type="submit" value="查询"/>&nbsp;&nbsp;
+      </form>
+      <table class='div' border=5px> 
+          <tr>
+              <td>ID</td>
+              <td>始发站</td>
+              <td>终点站</td>
+              <td>票价</td>
+              <td>剩余票量</td>
+              <td>是否订票</td>
+          </tr>
+          <tr>
+                <td>{{id}}</td>
+                <td>{{start}}</td>
+                <td>{{terminus}}</td>
+                <td>{{fares}}</td>
+                <td>{{surplus}}</td>
+              <td><form><a href="alfter_reserve.html" target ="_bank" title = "订票信息"><input type="button" value="订票"></a></form></td>
+          </tr>
+      </table>
+</body>
+</html>
